@@ -25,4 +25,11 @@
 - (void)setParentModel:(Model *)parentModel{
     _parentModel = parentModel;
 }
++ (instancetype)initWithName:(NSString*)name withLevel:(int)level withParentModel:(Model*)parentModel{
+    Model * model = [[Model alloc]init];
+    model.name = name;
+    model.level = level;
+    model.parentModel = parentModel;
+    return model;
+}
 @end

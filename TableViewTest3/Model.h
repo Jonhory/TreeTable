@@ -20,4 +20,6 @@
 
 @property (nonatomic,strong)Model * parentModel;
 
++ (instancetype)initWithName:(NSString*)name withLevel:(int)level withParentModel:(Model*)parentModel;
+
 @end

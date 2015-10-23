@@ -70,6 +70,14 @@
         _label.frame = CGRectMake(10 + 20*3, 0,  SCREEN.width-10-20*3, 40);
         _label.text = _model.name;
     }
+    if (model.level == 5 ) {
+        _label.frame = CGRectMake(10 + 20*4, 0,  SCREEN.width-10-20*4, 40);
+        _label.text = _model.name;
+    }
+    if (model.level == 6 ) {
+        _label.frame = CGRectMake(10 + 20*5, 0,  SCREEN.width-10-20*5, 40);
+        _label.text = _model.name;
+    }
     
     
     
