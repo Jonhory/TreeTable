@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4086082B1BE7628D00CAEA7B /* arrow_bottom1.png in Resources */ = {isa = PBXBuildFile; fileRef = 408608291BE7628D00CAEA7B /* arrow_bottom1.png */; };
+		4086082C1BE7628D00CAEA7B /* arrow_right1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086082A1BE7628D00CAEA7B /* arrow_right1.png */; };
 		408DB64F1BD4BC75003D9877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 408DB64E1BD4BC75003D9877 /* main.m */; };
 		408DB6521BD4BC75003D9877 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408DB6511BD4BC75003D9877 /* AppDelegate.m */; };
 		408DB6551BD4BC75003D9877 /* TableViewTest3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 408DB6531BD4BC75003D9877 /* TableViewTest3.xcdatamodeld */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		408608291BE7628D00CAEA7B /* arrow_bottom1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_bottom1.png; sourceTree = "<group>"; };
+		4086082A1BE7628D00CAEA7B /* arrow_right1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right1.png; sourceTree = "<group>"; };
 		408DB6491BD4BC75003D9877 /* TableViewTest3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewTest3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408DB64D1BD4BC75003D9877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408DB64E1BD4BC75003D9877 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				408DB6761BD4BDB5003D9877 /* Model.m */,
 				408DB6781BD4BDD0003D9877 /* MyTableViewCell.h */,
 				408DB6791BD4BDD0003D9877 /* MyTableViewCell.m */,
+				408608291BE7628D00CAEA7B /* arrow_bottom1.png */,
+				4086082A1BE7628D00CAEA7B /* arrow_right1.png */,
 				408DB65C1BD4BC75003D9877 /* Images.xcassets */,
 				408DB65E1BD4BC75003D9877 /* LaunchScreen.xib */,
 				408DB6531BD4BC75003D9877 /* TableViewTest3.xcdatamodeld */,
@@ -209,6 +215,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4086082C1BE7628D00CAEA7B /* arrow_right1.png in Resources */,
+				4086082B1BE7628D00CAEA7B /* arrow_bottom1.png in Resources */,
 				408DB6601BD4BC75003D9877 /* LaunchScreen.xib in Resources */,
 				408DB65D1BD4BC75003D9877 /* Images.xcassets in Resources */,
 			);

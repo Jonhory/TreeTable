@@ -32,4 +32,7 @@
     model.parentModel = parentModel;
     return model;
 }
+- (void)setIsOpen:(BOOL)isOpen{
+    _isOpen = isOpen;
+}
 @end

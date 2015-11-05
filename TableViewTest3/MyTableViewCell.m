@@ -11,7 +11,9 @@
 #import "Model.h"
 
 @interface MyTableViewCell(){
-    UILabel * _label ;
+    UILabel * _label;
+    UIImageView * _imageView;
+    UIImageView * _imageViewArrow;
 }
 
 @end
@@ -39,53 +41,55 @@
     return self;
 }
 - (void)initView{
-    UILabel * label = [[UILabel alloc]init];
-    label.backgroundColor = [UIColor lightGrayColor];
-    
-//    label.text = _model.name;
-    [self addSubview:label];
-    _label = label;
+    _label = [[UILabel alloc]initWithFrame:CGRectMake(30, 0, SCREEN.width - 40, 40)];
+    _label.backgroundColor = [UIColor colorWithRed:204.0/255 green:238.0/255 blue:208.0/255 alpha:1.0];
+    _imageView = [[UIImageView alloc]init];
+    _imageViewArrow = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, 15, 15)];
+    [_imageViewArrow setImage:[UIImage imageNamed:@"arrow_right1.png"]];
+    [_imageView addSubview:_imageViewArrow];
+    [_imageView addSubview:_label];
+    [self addSubview:_imageView];
 }
-
 - (void)setModel:(Model *)model{
     _model = model;
+    if (model.isOpen == YES) {
+        [_imageViewArrow setImage:[UIImage imageNamed:@"arrow_bottom1.png"]];
+    }
+    if (model.isOpen == NO) {
+        [_imageViewArrow setImage:[UIImage imageNamed:@"arrow_right1.png"]];
+    }
     
     if (model.level == 1) {
         
-        _label.frame = CGRectMake(10, 0, SCREEN.width-10, 40);
+        _imageView.frame = CGRectMake(10, 0, SCREEN.width-10, 40);
         _label.text = _model.name;
     }
     
     if (model.level == 2) {
-        _label.frame = CGRectMake(10 + 20, 0, SCREEN.width-10-20, 40);
+        _imageView.frame = CGRectMake(10 + 20, 0, SCREEN.width-10-20, 40);
         _label.text = _model.name;
     }
     
     if (model.level == 3 ) {
-        _label.frame = CGRectMake(10 + 20*2, 0,  SCREEN.width-10-20*2, 40);
+        _imageView.frame = CGRectMake(10 + 20*2, 0,  SCREEN.width-10-20*2, 40);
         _label.text = _model.name;
     }
     
     if (model.level == 4 ) {
-        _label.frame = CGRectMake(10 + 20*3, 0,  SCREEN.width-10-20*3, 40);
+        _imageView.frame = CGRectMake(10 + 20*3, 0,  SCREEN.width-10-20*3, 40);
         _label.text = _model.name;
     }
     if (model.level == 5 ) {
-        _label.frame = CGRectMake(10 + 20*4, 0,  SCREEN.width-10-20*4, 40);
+        _imageView.frame = CGRectMake(10 + 20*4, 0,  SCREEN.width-10-20*4, 40);
         _label.text = _model.name;
     }
     if (model.level == 6 ) {
-        _label.frame = CGRectMake(10 + 20*5, 0,  SCREEN.width-10-20*5, 40);
+        _imageView.frame = CGRectMake(10 + 20*5, 0,  SCREEN.width-10-20*5, 40);
         _label.text = _model.name;
+        _imageViewArrow.image = nil;
     }
     
-    
-    
 }
-//- (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-////    MyTableViewCell * cell = [UITableViewCel
-//}
-
 
 
 - (void)awakeFromNib {

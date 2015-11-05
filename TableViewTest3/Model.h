@@ -14,6 +14,8 @@
 
 @property (nonatomic,assign)int level;
 
+@property (nonatomic,assign)BOOL isOpen;
+
 //@property (nonatomic,assign)int parentLevel;
 
 //@property (nonatomic ,strong)NSString * parentText;

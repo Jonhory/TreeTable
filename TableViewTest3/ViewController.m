@@ -7,13 +7,17 @@
 //
 
 #define SCREEN [UIScreen mainScreen].bounds.size
+#define CellH 35 //每行cell高度
+#define NAV_HEIGHT  44
 
 #import "ViewController.h"
 #import "MyTableViewCell.h"
 #import "Model.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+{
+    BOOL _firstEnter;//第一次进入的时候tableview高度
+}
 
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic ,strong )NSMutableArray * dataArr;
@@ -31,10 +35,10 @@
     
     _dataArr = [NSMutableArray array];
     _dicOpen = [NSMutableDictionary dictionary];
-    
+    _firstEnter = YES;
     [self initData];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 100, SCREEN.width, SCREEN.height-100)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAV_HEIGHT, SCREEN.width, SCREEN.height - NAV_HEIGHT)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     UIView * viewZero = [[UIView alloc]initWithFrame:CGRectZero];
@@ -57,16 +61,34 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataArr.count;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return CellH;
+}
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MyTableViewCell * cell = [MyTableViewCell cellWithTableView:tableView];
     cell.model = _dataArr[indexPath.row];
+    if (_firstEnter) {
+        [self tableViewFrameAndScroll];
+    }
     return cell;
+}
+#pragma mark 重新判断tableview的范围及是否可以滑动
+- (void)tableViewFrameAndScroll{
+    CGFloat listHeight = SCREEN.height - NAV_HEIGHT;
+    CGFloat listH = CellH * _dataArr.count;
+    CGFloat listHHH = listH > listHeight ? listHeight : listH;
+    BOOL isScroll = listH > listHeight ? YES : NO;
+    _tableView.bounces = isScroll;
+    _tableView.frame = CGRectMake(0,  NAV_HEIGHT, SCREEN.width,listHHH);
+    
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MyTableViewCell * cell = (MyTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     Model * model = cell.model;
     if ([_dicOpen objectForKey:[NSString stringWithFormat:@"%@",cell.model]] == model) {
+        model.isOpen = NO;
+        
         NSLog(@"第二次点击该cell  cell Name :%@",model);
         [_dicOpen setValue:nil forKey:[NSString stringWithFormat:@"%@",cell.model]];
         
@@ -264,6 +286,7 @@
         return ;
     }
     else if ([_dicOpen objectForKey:[NSString stringWithFormat:@"%@",cell.model]] == nil) {
+        model.isOpen = YES;
         NSLog(@"第一次点击该cell  :%@",model);
         [_dicOpen setValue:model forKey:[NSString stringWithFormat:@"%@",cell.model]];
         NSLog(@"%@",_dicOpen);
@@ -292,10 +315,6 @@
         }
         if (model.level == 4) {//点击四级添加
             for (int i = 0; i<3; i++) {
-                //                Model * model4 = [[Model alloc]init];
-                //                model4.level = 4;
-                //                model4.parentModel = model;
-                //                model4.name = [NSString stringWithFormat:@"四级:%d",i];
                 Model * model5 = [Model initWithName:[NSString stringWithFormat:@"五级:%d",i] withLevel:5 withParentModel:model];
                 [_dataArr insertObject:model5 atIndex:indexPath.row+1+i];
             }
