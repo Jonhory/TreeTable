@@ -28,13 +28,27 @@ static NSString * const  cellID = @"MainTableViewCellID";
     return cell;
 }
 
+- (void)setPeople:(PeopleModel *)people{
+    _people = people;
+    
+    self.titleLabel.text = people.titleStr;
+    self.remarkLabel.text = people.remarkStr;
+    if (people.isOpen) {
+//        [UIView animateWithDuration:0.3 animations:^{
+            self.iconIV.transform = CGAffineTransformMakeRotation(90 * M_PI/180.0);
+//        }];
+    }else {
+//        [UIView animateWithDuration:0.3 animations:^{
+            self.iconIV.transform = CGAffineTransformIdentity;
+//    }];
+    }
+}
 
 /**
  *  重写布局
  */
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

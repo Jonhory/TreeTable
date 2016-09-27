@@ -28,7 +28,7 @@ static NSString * const headerViewID = @"HeaderViewID";
         view.width = SCREEN.width;
         
         UIView * bv = [[UIView alloc]init];
-        bv.backgroundColor = [UIColor purpleColor];
+        bv.backgroundColor = [UIColor colorWithRed:255/255.0 green:222/255.0 blue:173/255.0 alpha:1.0];
         view.backgroundView = bv;
     }
     return view;

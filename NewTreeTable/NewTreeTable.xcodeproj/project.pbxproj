@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8907D8D31D9AC10200DA492F /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 8907D8D21D9AC10200DA492F /* NSString+Random.m */; };
 		8927CDBA1D9A0BED0055F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDB91D9A0BED0055F44D /* main.m */; };
 		8927CDBD1D9A0BED0055F44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDBC1D9A0BED0055F44D /* AppDelegate.m */; };
 		8927CDC01D9A0BED0055F44D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDBF1D9A0BED0055F44D /* ViewController.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8907D8D11D9AC10200DA492F /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
+		8907D8D21D9AC10200DA492F /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
 		8927CDB51D9A0BED0055F44D /* NewTreeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTreeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8927CDB91D9A0BED0055F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8927CDBB1D9A0BED0055F44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				8927CDE31D9A19890055F44D /* UIView+Extension.h */,
 				8927CDE41D9A19890055F44D /* UIView+Extension.m */,
+				8907D8D11D9AC10200DA492F /* NSString+Random.h */,
+				8907D8D21D9AC10200DA492F /* NSString+Random.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				8927CDDB1D9A11DD0055F44D /* PeopleModel.m in Sources */,
 				8927CDE51D9A19890055F44D /* UIView+Extension.m in Sources */,
 				8927CDEA1D9A75860055F44D /* SecondVC.m in Sources */,
+				8907D8D31D9AC10200DA492F /* NSString+Random.m in Sources */,
 				8927CDBA1D9A0BED0055F44D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

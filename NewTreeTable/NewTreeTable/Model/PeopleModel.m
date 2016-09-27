@@ -10,4 +10,14 @@
 
 @implementation PeopleModel
 
++(instancetype)random{
+    PeopleModel * model = [[PeopleModel alloc]init];
+    model.titleStr = [NSString randomStr];
+    model.remarkStr = [NSString randomStr];
+    model.onlyID = [NSString stringWithFormat:@"%@",model];
+    return model;
+}
+
 @end
+
+

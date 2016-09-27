@@ -10,6 +10,8 @@
 #define PrefixHeader_pch
 
 #import "UIView+Extension.h"
+#import "NSString+Random.h"
+
 #define SCREEN [UIScreen mainScreen].bounds.size
 
 

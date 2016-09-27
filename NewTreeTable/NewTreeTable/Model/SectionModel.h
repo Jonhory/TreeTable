@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PeopleModel;
+
 @interface SectionModel : NSObject
 
 @property (nonatomic ,copy) NSString * iconName;
@@ -18,7 +20,8 @@
 
 @property (nonatomic ,copy) NSString * onlyID;
 
-@property (nonatomic ,strong) NSMutableArray * bodies;//peopleModel
+@property (nonatomic ,strong) NSMutableArray <PeopleModel *>* bodies;//peopleModel
+@property (nonatomic ,assign) BOOL isOpen;
 
 + (instancetype)randomModel;
 

@@ -22,4 +22,6 @@
 
 @property (nonatomic ,assign) BOOL isOpen;
 
++ (instancetype)random;
+
 @end

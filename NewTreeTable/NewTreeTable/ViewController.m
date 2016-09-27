@@ -20,7 +20,7 @@
 
 @property (nonatomic ,weak) UITableView * tableView;
 
-@property (nonatomic ,strong) NSMutableArray * sectionDatas;
+@property (nonatomic ,strong) NSMutableArray <SectionModel *>* sectionDatas;
 
 //  [{s:[{},{}]} , ,, ] 
 @end
@@ -46,6 +46,8 @@
         int y = [self random];
         for (int i = 0; i<y; i++) {
             SectionModel * model = [SectionModel randomModel];
+            PeopleModel * people = [PeopleModel random];
+            [model.bodies addObject:people];
             [_sectionDatas addObject:model];
         }
     }
@@ -68,20 +70,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    NSInteger count = self.sectionDatas[section].bodies.count;
+    if (self.sectionDatas[section].isOpen) {
+        return count;
+    }
+    return 0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     HeaderView * view = [HeaderView headerView:tableView];
     view.model = self.sectionDatas[section];
-    __weak __typeof(self)weakSelf = self;
+    __block HeaderView * weakView = view;
     view.headerViewClickBlock = ^(){
-        NSLog(@"%@",view);
+        weakView.model.isOpen = !weakView.model.isOpen;
+        [tableView reloadData];
     };
-    
-    view.tag = 100+section;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sectionClick:)];
-    [view addGestureRecognizer:tap];
     return view;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -94,12 +97,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell * cell = [MainTableViewCell mainTableViewCellWithTableView:tableView];
+    cell.people = self.sectionDatas[indexPath.section].bodies[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.people.isOpen = !cell.people.isOpen;
+    self.sectionDatas[indexPath.section].bodies[indexPath.row].isOpen = cell.people.isOpen;
+    
     if (cell.people.isOpen) {
         [UIView animateWithDuration:0.3 animations:^{
             cell.iconIV.transform = CGAffineTransformMakeRotation(90 * M_PI/180.0);
@@ -109,20 +115,12 @@
             cell.iconIV.transform = CGAffineTransformIdentity;        }];
     }
     
-    SecondVC * vc = [[SecondVC alloc]init];
-    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [self presentViewController:vc animated:NO completion:nil];
     
+    
+    
+    //SecondVC * vc = [[SecondVC alloc]init];
+    //[self presentViewController:vc animated:NO completion:nil];
 }
-
-- (void)sectionClick:(UITapGestureRecognizer *)tap{
-    NSInteger tag = tap.view.tag;
-    NSLog(@"%zi",tag);
-}
-
-
-
 
 - (int)random{
     int random = arc4random()%10+1;
