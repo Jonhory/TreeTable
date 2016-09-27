@@ -11,8 +11,16 @@
 		8927CDBD1D9A0BED0055F44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDBC1D9A0BED0055F44D /* AppDelegate.m */; };
 		8927CDC01D9A0BED0055F44D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDBF1D9A0BED0055F44D /* ViewController.m */; };
 		8927CDC31D9A0BED0055F44D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDC11D9A0BED0055F44D /* Main.storyboard */; };
-		8927CDC51D9A0BED0055F44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDC41D9A0BED0055F44D /* Assets.xcassets */; };
 		8927CDC81D9A0BED0055F44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDC61D9A0BED0055F44D /* LaunchScreen.storyboard */; };
+		8927CDD41D9A0CE10055F44D /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDD21D9A0CE10055F44D /* MainTableViewCell.m */; };
+		8927CDD51D9A0CE10055F44D /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDD31D9A0CE10055F44D /* MainTableViewCell.xib */; };
+		8927CDD81D9A117E0055F44D /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDD71D9A117E0055F44D /* SectionModel.m */; };
+		8927CDDB1D9A11DD0055F44D /* PeopleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDDA1D9A11DD0055F44D /* PeopleModel.m */; };
+		8927CDDE1D9A17200055F44D /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDDD1D9A17200055F44D /* HeaderView.m */; };
+		8927CDE01D9A17350055F44D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDDF1D9A17350055F44D /* HeaderView.xib */; };
+		8927CDE51D9A19890055F44D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDE41D9A19890055F44D /* UIView+Extension.m */; };
+		8927CDE71D9A466E0055F44D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8927CDE61D9A466E0055F44D /* Images.xcassets */; };
+		8927CDEA1D9A75860055F44D /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8927CDE91D9A75860055F44D /* SecondVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +31,24 @@
 		8927CDBE1D9A0BED0055F44D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8927CDBF1D9A0BED0055F44D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8927CDC21D9A0BED0055F44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8927CDC41D9A0BED0055F44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8927CDC71D9A0BED0055F44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8927CDC91D9A0BED0055F44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8927CDD11D9A0CE10055F44D /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		8927CDD21D9A0CE10055F44D /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		8927CDD31D9A0CE10055F44D /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		8927CDD61D9A117E0055F44D /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
+		8927CDD71D9A117E0055F44D /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
+		8927CDD91D9A11DD0055F44D /* PeopleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleModel.h; sourceTree = "<group>"; };
+		8927CDDA1D9A11DD0055F44D /* PeopleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleModel.m; sourceTree = "<group>"; };
+		8927CDDC1D9A17200055F44D /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		8927CDDD1D9A17200055F44D /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		8927CDDF1D9A17350055F44D /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		8927CDE11D9A191A0055F44D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8927CDE31D9A19890055F44D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8927CDE41D9A19890055F44D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8927CDE61D9A466E0055F44D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8927CDE81D9A75860055F44D /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
+		8927CDE91D9A75860055F44D /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +85,14 @@
 				8927CDBC1D9A0BED0055F44D /* AppDelegate.m */,
 				8927CDBE1D9A0BED0055F44D /* ViewController.h */,
 				8927CDBF1D9A0BED0055F44D /* ViewController.m */,
+				8927CDE81D9A75860055F44D /* SecondVC.h */,
+				8927CDE91D9A75860055F44D /* SecondVC.m */,
+				8927CDCF1D9A0CBF0055F44D /* Model */,
+				8927CDD01D9A0CBF0055F44D /* View */,
+				8927CDE21D9A19820055F44D /* Other */,
+				8927CDE11D9A191A0055F44D /* PrefixHeader.pch */,
+				8927CDE61D9A466E0055F44D /* Images.xcassets */,
 				8927CDC11D9A0BED0055F44D /* Main.storyboard */,
-				8927CDC41D9A0BED0055F44D /* Assets.xcassets */,
 				8927CDC61D9A0BED0055F44D /* LaunchScreen.storyboard */,
 				8927CDC91D9A0BED0055F44D /* Info.plist */,
 				8927CDB81D9A0BED0055F44D /* Supporting Files */,
@@ -77,6 +106,39 @@
 				8927CDB91D9A0BED0055F44D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8927CDCF1D9A0CBF0055F44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8927CDD61D9A117E0055F44D /* SectionModel.h */,
+				8927CDD71D9A117E0055F44D /* SectionModel.m */,
+				8927CDD91D9A11DD0055F44D /* PeopleModel.h */,
+				8927CDDA1D9A11DD0055F44D /* PeopleModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8927CDD01D9A0CBF0055F44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8927CDD11D9A0CE10055F44D /* MainTableViewCell.h */,
+				8927CDD21D9A0CE10055F44D /* MainTableViewCell.m */,
+				8927CDD31D9A0CE10055F44D /* MainTableViewCell.xib */,
+				8927CDDC1D9A17200055F44D /* HeaderView.h */,
+				8927CDDD1D9A17200055F44D /* HeaderView.m */,
+				8927CDDF1D9A17350055F44D /* HeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8927CDE21D9A19820055F44D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8927CDE31D9A19890055F44D /* UIView+Extension.h */,
+				8927CDE41D9A19890055F44D /* UIView+Extension.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8927CDC81D9A0BED0055F44D /* LaunchScreen.storyboard in Resources */,
-				8927CDC51D9A0BED0055F44D /* Assets.xcassets in Resources */,
+				8927CDE71D9A466E0055F44D /* Images.xcassets in Resources */,
+				8927CDE01D9A17350055F44D /* HeaderView.xib in Resources */,
+				8927CDD51D9A0CE10055F44D /* MainTableViewCell.xib in Resources */,
 				8927CDC31D9A0BED0055F44D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,8 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8927CDDE1D9A17200055F44D /* HeaderView.m in Sources */,
+				8927CDD81D9A117E0055F44D /* SectionModel.m in Sources */,
 				8927CDC01D9A0BED0055F44D /* ViewController.m in Sources */,
 				8927CDBD1D9A0BED0055F44D /* AppDelegate.m in Sources */,
+				8927CDD41D9A0CE10055F44D /* MainTableViewCell.m in Sources */,
+				8927CDDB1D9A11DD0055F44D /* PeopleModel.m in Sources */,
+				8927CDE51D9A19890055F44D /* UIView+Extension.m in Sources */,
+				8927CDEA1D9A75860055F44D /* SecondVC.m in Sources */,
 				8927CDBA1D9A0BED0055F44D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +334,7 @@
 		8927CDCD1D9A0BED0055F44D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NewTreeTable/PrefixHeader.pch";
 				INFOPLIST_FILE = NewTreeTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -277,7 +347,7 @@
 		8927CDCE1D9A0BED0055F44D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NewTreeTable/PrefixHeader.pch";
 				INFOPLIST_FILE = NewTreeTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +376,7 @@
 				8927CDCE1D9A0BED0055F44D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
