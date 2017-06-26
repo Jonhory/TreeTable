@@ -1,6 +1,10 @@
 # TreeTable
-简单逻辑实现的多级列表
-    目前有一个想要改进的地方：每次删除或者加载数据之后，都是reloadData，希望使用reloadRowsAtIndexPaths：withRowAnimation：的方法，但能力不足，希望有人帮助，作出改进。
+### 简单逻辑实现的多级列表
+
+![](http://ww1.sinaimg.cn/large/c6a1cfeagy1fgyqiq8aa3j20dj0m9dh1.jpg)
+
+
+目前有一个想要改进的地方：每次删除或者加载数据之后，都是reloadData，希望使用reloadRowsAtIndexPaths：withRowAnimation：的方法，但能力不足，希望有人帮助，作出改进。
 
 本demo实现了类似qq列表，但能自行扩展的多级列表（demo中实现了4级列表）。满足每次点击cell才发起网络请求获取数据的思路（demo中在每次点击cell的时候创建并加载了更多的model）。满足自定义各级cell。
 

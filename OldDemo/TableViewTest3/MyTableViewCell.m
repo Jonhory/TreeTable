@@ -55,7 +55,7 @@
     if (model.isOpen == YES) {
         [_imageViewArrow setImage:[UIImage imageNamed:@"arrow_bottom1.png"]];
     }
-    if (model.isOpen == NO) {
+    else if (model.isOpen == NO) {
         [_imageViewArrow setImage:[UIImage imageNamed:@"arrow_right1.png"]];
     }
     
@@ -64,16 +64,23 @@
         _imageView.frame = CGRectMake(10, 0, SCREEN.width-10, 40);
         _label.text = _model.name;
     }
-    
-    if (model.level == 2) {
+    else if (model.level == 2) {
         _label.backgroundColor = [UIColor colorWithRed:204.0/255 green:238.0/255 blue:208.0/255 alpha:0.666];//修改二级颜色alpha
         _imageView.frame = CGRectMake(10 + 20, 0, SCREEN.width-10-20, 40);
         _label.text = _model.name;
     }
-    
-    if (model.level == 3 ) {
+    else if (model.level == 3 ) {
         _label.backgroundColor = [UIColor colorWithRed:204.0/255 green:238.0/255 blue:208.0/255 alpha:1.0];//修改三级颜色alpha
         _imageView.frame = CGRectMake(10 + 20*2, 0,  SCREEN.width-10-20*2, 40);
+        _label.text = _model.name;
+    }
+    else if (model.level == 4) {
+        _label.backgroundColor = [UIColor redColor];
+        _imageView.frame = CGRectMake(10 + 20*3, 0,  SCREEN.width-10-20*3, 40);
+        _label.text = _model.name;
+    } else {
+        _label.backgroundColor = [UIColor blueColor];
+        _imageView.frame = CGRectMake(10, 0,  SCREEN.width-10, 40);
         _label.text = _model.name;
     }
 }
@@ -81,6 +88,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
