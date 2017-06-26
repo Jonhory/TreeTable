@@ -23,8 +23,6 @@
 @property (nonatomic, strong )NSMutableArray *dataArr;
 @property (nonatomic, strong)NSMutableDictionary *dicOpen;
 
-
-
 @end
 
 
@@ -32,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     _dataArr = [NSMutableArray array];
     _dicOpen = [NSMutableDictionary dictionary];
