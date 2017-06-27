@@ -18,4 +18,21 @@
     return model;
 }
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"sons":@"Model"
+             };
+}
+
+@end
+
+
+@implementation Resp
+
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"data":@"Model"
+             };
+}
+
 @end
